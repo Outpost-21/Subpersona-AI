@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef>
+		<defName>SubAI_ShellPawnMaker</defName>
+		<label>subpersona shell</label>
+		<description>Creates a subpersona shell.</description>
+		<thingClass>Building</thingClass>
+
+		<graphicData>
+			<texPath>Things/Alpha</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+
+		<statBases>
+			<WorkToMake>550</WorkToMake>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+		</statBases>
+
+		<comps>
+			<li Class="O21Toolbox.CompProperties_PawnSpawner">
+				<pawnKind>SubAI_CraftedSubpersonaShell</pawnKind>
+				<newborn>True</newborn>
+				<canGeneratePawnRelations>False</canGeneratePawnRelations>
+			</li>
+		</comps>
+
+		<size>(1,1)</size>
+		<category>Building</category>
+		<pathCost>200</pathCost>
+		<passability>Standable</passability>
+		<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<filthLeaving>Filth_RubbleRock</filthLeaving>
+		<hasInteractionCell>false</hasInteractionCell>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<repairEffect>Repair</repairEffect>
+		<useHitPoints>True</useHitPoints>
+		<selectable>true</selectable>
+		<surfaceType>Item</surfaceType>
+		<tickerType>Normal</tickerType>
+	</ThingDef>
+
+	<O21Toolbox.AutomatedProducer.RecipeDef_Automated>
+		<defName>SubAI_CreateSubpersonaShell</defName>
+		<label>create subpersona shell</label>
+		<description>Create a subpersona shell.</description>
+		<randomTickCost>false</randomTickCost>
+		<baseTickCost>60000</baseTickCost>
+		<costs>
+			<Steel>240</Steel>
+			<Plasteel>60</Plasteel>
+			<ComponentSpacer>8</ComponentSpacer>
+		</costs>
+		<products>
+			<SubAI_ShellPawnMaker>1</SubAI_ShellPawnMaker>
+		</products>
+		<requiredResearch>SubAI_SubpersonaShell</requiredResearch>
+		<recipeInfo>
+			<recipeType>Shell Fabrication</recipeType>
+			<recipeIcon>SubpersonaAI/Shell/Preview</recipeIcon>
+			<productionString>Fabricating: </productionString>
+		</recipeInfo>
+	</O21Toolbox.AutomatedProducer.RecipeDef_Automated>
+
+	<PawnKindDef>
+		<defName>SubAI_CraftedSubpersonaShell</defName>
+		<label>subpersona shell</label>
+		<race>SubAI_SubpersonaShell</race>
+		<combatPower>40</combatPower>
+		<baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+		<isFighter>false</isFighter>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>SubpersonaShellBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<apparelTags Inherit="false" />
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelMoney>
+			<min>0</min>
+			<max>0</max>
+		</apparelMoney>
+		<techHediffsChance>0.0</techHediffsChance>
+		<techHediffsMoney>
+			<min>0</min>
+			<max>0</max>
+		</techHediffsMoney>
+		<techHediffsTags Inherit="false" />
+		<initialWillRange>0</initialWillRange>
+		<initialResistanceRange>30~40</initialResistanceRange>
+		<modExtensions>
+			<li Class="O21Toolbox.PawnKindExt.DefModExt_ExtendedPawnKind">
+				<flattenSkills>True</flattenSkills>
+				<clearPassions>True</clearPassions>
+				<clearApparel>True</clearApparel>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+</Defs>
