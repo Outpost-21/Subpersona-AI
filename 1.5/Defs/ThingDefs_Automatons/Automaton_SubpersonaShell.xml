@@ -110,6 +110,7 @@
 			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
 		</statBases>
 		<race>
+			<renderTree>Asimov_Automaton</renderTree>
 			<hasGenders>False</hasGenders>
 			<nameGenerator>SubAI_NameMakerShell</nameGenerator>
 			<baseBodySize>1</baseBodySize>
@@ -173,7 +174,6 @@
 				<canUseMelee>true</canUseMelee>
 				<corpseEdible>false</corpseEdible>
 				<corpseRots>false</corpseRots>
-				<affectedByEMP>true</affectedByEMP>
 				<immuneToDisease>true</immuneToDisease>
 				<huntTarget>true</huntTarget>
 				<clearPassions>true</clearPassions>
