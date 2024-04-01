@@ -14,4 +14,8 @@
 		<li IfModActive="Ludeon.RimWorld.Ideology">1.4/Mods/Ideology</li>
 		<li IfModActive="neronix17.outerrim.galaxies">1.4/Mods/OuterRim</li>
 	</v1.4>
+	<v1.5>
+		<li>/</li>
+		<li>1.5</li>
+	</v1.5>
 </loadFolders>
