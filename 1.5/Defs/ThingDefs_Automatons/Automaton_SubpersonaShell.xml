@@ -224,6 +224,12 @@
 				</slots>
 			</li>
 			<li Class="Asimov.CompProperties_Hibernation" />
+			<li Class="CompProperties_Stunnable">
+				<affectedDamageDefs>
+					<li>Stun</li>
+					<li>EMP</li>
+				</affectedDamageDefs>
+			</li>
 		</comps>
 		<modExtensions>
 			<li Class="Asimov.DefModExt_EnergyNeed" />

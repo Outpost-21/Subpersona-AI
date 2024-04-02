@@ -131,7 +131,7 @@ namespace SubpersonaAI
             {
 				Pawn pawn = Corpse.InnerPawn;
 				EjectContents();
-				ResurrectionUtility.Resurrect(pawn);
+				ResurrectionUtility.TryResurrect(pawn);
             }
 			foreach(Thing thing in innerContainer)
             {
